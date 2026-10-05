@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supabase App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="panel">
+        <h1>Supabase Notes</h1>
+        <p class="subtitle">Create and view saved records in a connected Supabase database.</p>
+
+        <div id="status" class="status">Checking Supabase connection...</div>
+
+        <form id="note-form">
+          <label for="title">Title</label>
+          <input id="title" name="title" type="text" placeholder="Enter a title" required />
+
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="4" placeholder="Write your note" required></textarea>
+
+          <button type="submit">Save note</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Saved items</h2>
+        <ul id="items-list" class="items-list"></ul>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

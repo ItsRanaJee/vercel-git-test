@@ -1,0 +1,144 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --panel-soft: #1f2937;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --success: #10b981;
+  --danger: #ef4444;
+  --border: rgba(148, 163, 184, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #020817, #111827 35%, #1e293b);
+  color: var(--text);
+}
+
+.container {
+  max-width: 980px;
+  margin: 48px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+}
+
+.panel {
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.status {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  color: #c7d2fe;
+}
+
+.status.error {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #fecaca;
+}
+
+.status.success {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #bbf7d0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+input, textarea {
+  width: 100%;
+  background: var(--panel-soft);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+.items-list {
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.item {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(31, 41, 55, 0.8);
+}
+
+.item h3 {
+  margin: 0 0 8px;
+}
+
+.item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.empty-state {
+  color: var(--muted);
+  padding: 16px 0;
+}
+
+@media (max-width: 760px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
